@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cron = require('node-cron');
 const updateCryptoList = require('./src/backgroundTasks/updateCryptoList');
 const cryptoConversionAPI = require('./src/api/cryptoConversion');
+const publicTreasuryAPI = require('./src/api/publicTreasury');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,6 +24,8 @@ cron.schedule(cronExpression, () => {
 
 // Use the cryptoConversion API
 app.use('/api/cryptoConversion', cryptoConversionAPI);
+// Use the publicTreasury API
+app.use('/api/publicTreasury', publicTreasuryAPI);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
