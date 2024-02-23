@@ -1,0 +1,41 @@
+Task 1:
+
+Get the names and ids of all cryptocurrencies:
+
+Use Coingecko's API to fetch the list of cryptocurrencies.
+Extract the necessary information like name and id.
+Store this information in a MongoDB database.
+Write a background job for hourly updates:
+
+Create a script or job that fetches the updated list of cryptocurrencies using Coingecko's API.
+Compare the existing data in the MongoDB database with the new data.
+Update the database with any changes.
+Schedule this job to run every hour.
+
+
+Task 2:
+
+Build an API for currency conversion:
+Create an API endpoint that takes Coingecko IDs of two cryptocurrencies and a date.
+Utilize Coingecko's historical price data API to get the prices on the specified date.
+Calculate and return the conversion rate of one currency to another on that date.
+
+
+Task 3:
+
+Integrate Coingecko’s /companies/public_treasury API:
+Develop an API endpoint that takes a cryptocurrency (either Bitcoin or Ethereum) as input.
+Use Coingecko’s /companies/public_treasury API to retrieve the list of companies holding the specified cryptocurrency.
+Return this list as a response.
+
+
+
+Cool insights - 
+
+*   `0`: The minute field. It specifies that the task should run when the minute is 0.
+*   `*`: The hour field. It indicates that the task should run every hour.
+*   `*`: The day of the month field. It signifies that the task is not restricted to a specific day of the month.
+*   `*`: The month field. It implies that the task is not restricted to a specific month.
+*   `*`: The day of the week field. It denotes that the task is not restricted to a specific day of the week.
+
+So, `0 * * * *` means the task will run every hour at the 0th minute.
