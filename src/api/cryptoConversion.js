@@ -1,4 +1,3 @@
-// /src/api/cryptoConversion.js
 const express = require('express');
 const axios = require('axios');
 const router = express.Router();
@@ -17,7 +16,6 @@ router.post('/convert', async (req, res) => {
     res.json({ conversionRate });
   } catch (error) {
     console.error('Error converting currencies:', error.message);
-    console.error('Coingecko API Response:', error.response.data); // Log the response details
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
@@ -48,7 +46,7 @@ async function fetchHistoricalData(fromCurrency, toCurrency, date) {
 function calculateConversionRate(historicalData) {
   const [fromPrice, toPrice] = historicalData;
     if (fromPrice && toPrice) {
-        const conversionRate = fromPrice / toPrice; // Calculate conversion rate
+        const conversionRate = fromPrice / toPrice;
         return conversionRate;
     } else {
         throw new Error('No historical data available for the specified date');

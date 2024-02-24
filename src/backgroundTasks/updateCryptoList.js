@@ -1,6 +1,4 @@
-// /src/backgroundTasks/updateCryptoList.js
 const axios = require('axios');
-const mongoose = require('../database/mongoose');
 const Crypto = require('../models/cryptoModel');
 
 // Fetch and update crypto data in the database
@@ -12,6 +10,7 @@ async function updateCryptoList() {
 
     console.log(`Received crypto list with ${cryptoList.length} cryptocurrencies.`);
 
+    // Could have updated but then I'd have to map it with id
     // Clear existing data in the collection
     await Crypto.deleteMany({});
     console.log('Cleared existing data in the collection.');

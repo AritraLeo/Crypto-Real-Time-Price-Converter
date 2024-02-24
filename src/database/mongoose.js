@@ -1,6 +1,5 @@
-// /src/database/mongoose.js
 const mongoose = require('mongoose');
-require('dotenv').config();  // Load environment variables from .env file
+require('dotenv').config();
 
 const MONGO_CONN_URL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_USER_PASSWORD}@crypto-price-converter.nfcbfaw.mongodb.net/crypto`;
 

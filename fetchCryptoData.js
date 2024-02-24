@@ -1,7 +1,5 @@
-// /fetchCryptoData.js
 const Crypto = require('./src/models/cryptoModel');
 const axios = require('axios');
-const mongoose = require('./src/database/mongoose'); // Import the connected mongoose instance
 
 // Fetch and store crypto data
 async function fetchAndStoreCryptoData() {
