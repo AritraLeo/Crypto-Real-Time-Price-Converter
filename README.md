@@ -22,7 +22,7 @@ Before you begin, ensure you have met the following requirements:
 - Heroku account (optional for deployment)
 
 ## Installation
-
+```
 1. Clone the repository:
 
    ```bash
